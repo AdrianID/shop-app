@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shop_app/routes.dart';
+import 'package:shop_app/size_config.dart';
+import 'package:shop_app/view/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         // routes: routes,
@@ -18,7 +22,9 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-      // home:
+
+      initialRoute: HomeScreen.routeName,
+        routes: routes,
     );
   }
 }
