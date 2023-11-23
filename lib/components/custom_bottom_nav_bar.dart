@@ -5,6 +5,7 @@ import 'package:shop_app/view/home/home_screen.dart';
 
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/enums.dart';
+import 'package:shop_app/view/profile/profile_screen.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
@@ -63,7 +64,9 @@ class CustomBottomNavBar extends StatelessWidget {
                       ? kPrimaryColor
                       : inActiveIconColor,
                 ),
-                onPressed: () => {}
+                onPressed: () => {
+                  Navigator.pushNamed(context, ProfileScreen.routeName)
+                }
               ),
             ],
           )),
